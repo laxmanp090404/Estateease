@@ -1,0 +1,1 @@
+EstateEase is  a real estate app using MongoDB, Prisma, Express.js, Sass, Vite.js, and Socket.io, featuring secure authentication, real-time chat, estate booking, advanced property filtering, and live map views. The platform provides a seamless user experience with interactive features and real-time updates for efficient property management and discovery.
