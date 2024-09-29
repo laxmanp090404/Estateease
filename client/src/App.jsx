@@ -1,12 +1,11 @@
-import { useState } from 'react'
-
-
+import Navbar from './components/navbar/Navbar'
+import './layout.scss'
 function App() {
 
 
   return (
-    <div style={{backgroundColor:"red"}}>
-      <p>Hello world</p>
+    <div className="layout">
+      <Navbar/>
     </div>
   )
 }
