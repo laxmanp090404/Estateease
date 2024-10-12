@@ -1,3 +1,9 @@
+@import '../../responsive.scss';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 nav{
     height: 100px;
     display: flex;
@@ -7,7 +13,10 @@ nav{
     a{
         transition: all 0.4s ease;
         &:hover{
-            scale: 1.05;
+            scale: 1.15;
+        }
+        @include sm{
+            display: none;
         }
     }
     .left{
@@ -26,6 +35,15 @@ nav{
             img{
              width: 28px;
             }
+
+            span{
+                @include md{
+                    display: none;
+                }
+                @include sm{
+                    display: initial;
+                }
+            }
         }
     }
     .right{
@@ -34,8 +52,11 @@ nav{
         align-items: center;
         justify-content: flex-end;
         background-color: #fcf5f3;
-        height: 100%;
+         height: 100%;
         
+        @include md{
+            background-color: transparent;
+        }
         a{
             padding: 12px 24px;
             margin: 20px;
@@ -43,5 +64,50 @@ nav{
         .register{
             background-color: #fece51;
         }
+        .menuIcon{
+            display: none;
+            cursor: pointer;
+            z-index: 900;
+            border-radius: 100%;
+            @include sm{
+                display: inline;
+               
+            };
+            // svg{
+            //     width: 30px;
+            //     height: 30px;
+            // }
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .menu{
+            position:absolute;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column ;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 50%;
+            top: 0;
+            font-size: 24px;
+            //  this hides the menu 
+            right: -50%;
+            transition: all 1s ease-in-out;
+            
+           &.active{
+            right: 0%;
+            
+           }
+           @include sm{
+            a{
+                display: initial;
+            }
+           }
+        }
     }
 }
+
